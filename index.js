@@ -30,8 +30,8 @@ selectedColour[2] = 'green';
 console.log(selectedColour.length);
 
 function greet(name, lastname){
-    console.log("hello "+ name + lastname);
+    console.log("hello "+ name + "" + lastname);
 }
 
-greet("john");
-greet("mary");
+greet("john", "smith");
+greet("mary", "smith");
