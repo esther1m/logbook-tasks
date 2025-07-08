@@ -33,5 +33,12 @@ function greet(name, lastname){
     console.log("hello "+ name + "" + lastname);
 }
 
+function square(number){
+    return number * number;
+}
+
+let number = square(2);
+console.log(number);
+
 greet("john", "smith");
 greet("mary", "smith");
