@@ -16,3 +16,19 @@ let person = {
     name_object: 'jess' ,
     age_object: 19
 };
+
+console.log(person);
+
+person.name_object = 'lessia';
+console.log(person.name_object);
+
+person ['name_object'] = 'bebadoobee';
+console.log(person.name_object);
+
+let selectedColour = ['red', 'blue'];
+selectedColour[2] = 'green';
+console.log(selectedColour.length);
+
+function greet(){
+    console.log("hello world");
+}
