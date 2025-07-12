@@ -10,4 +10,9 @@ document.write("Hello " + names[2] + " there are " + names[2].length + " letters
 
 let alphabeticalNames = names.sort();
 
-console.log(alert("Here's a list of names in alphabetical order: " + alphabeticalNames));
+console.log(alert("Here's a list of names in alphabetical order: \n" + alphabeticalNames.join("\n")));
+
+let reverseNames = alphabeticalNames.reverse();
+console.log(alert("Here's a list of names in alphabetical order: \n" + reverseNames.join("\n")));
+
+
