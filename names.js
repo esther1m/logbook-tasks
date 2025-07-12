@@ -13,6 +13,6 @@ let alphabeticalNames = names.sort();
 console.log(alert("Here's a list of names in alphabetical order: \n" + alphabeticalNames.join("\n")));
 
 let reverseNames = alphabeticalNames.reverse();
-console.log(alert("Here's a list of names in alphabetical order: \n" + reverseNames.join("\n")));
+console.log(alert("Here's a list of names in reverse alphabetical order: \n" + reverseNames.join("\n")));
 
 
