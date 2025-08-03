@@ -17,6 +17,11 @@ class TaskManager {
         const newTask = new Task (description)
         this.taskList.push(newTask)
     }
+
+    listTasks(){
+        
+        return this.taskList
+    }
 }
 
 // Create a new task manager
@@ -25,3 +30,5 @@ const taskManager = new TaskManager();
 taskManager.addTask("Buy groceries");
 taskManager.addTask("Read a book");
 taskManager.addTask("Write code");
+
+console.log(taskManager.listTasks()); // Should display all tasks
