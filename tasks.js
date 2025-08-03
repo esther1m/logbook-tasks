@@ -62,11 +62,13 @@ taskManager.addTask("Write code", 2, "15-09-2025");
 taskManager.completeTask(1);
 taskManager.listTasks(); // Should display all tasks
 
+taskManager.priorityTasks();
+taskManager.listTasks();
+
 taskManager.deleteTask(2);
 taskManager.listTasks();
 
 const completedTasks = taskManager.filterTasks(task => task.completed);
 console.log(...completedTasks);
 
-taskManager.priorityTasks();
-taskManager.listTasks();
+
