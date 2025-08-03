@@ -1,10 +1,13 @@
 class Task{
     static uniqueid = 0
 
-    constructor(description){
+    constructor(description, priority, dueDate){
         this.id = Task.uniqueid++
         this.taskDescription =  description
         this.completed = false
+
+        this.priority = priority
+        this.dueDate = dueDate
     }
 }
 
@@ -13,8 +16,8 @@ class TaskManager {
         this.taskList = []
     }
 
-    addTask (description){
-        const newTask = new Task (description)
+    addTask (description, priority, dueDate){
+        const newTask = new Task (description, priority, dueDate)
         this.taskList.push(newTask)
     }
 
@@ -46,9 +49,9 @@ class TaskManager {
 // Create a new task manager
 const taskManager = new TaskManager();
 // Add tasks
-taskManager.addTask("Buy groceries");
-taskManager.addTask("Read a book");
-taskManager.addTask("Write code");
+taskManager.addTask("Buy groceries", 1, "08-08-2025");
+taskManager.addTask("Read a book", 3, "11-12-2025");
+taskManager.addTask("Write code", 2, "15-09-2025");
 
 // Mark a task as completed
 taskManager.completeTask(1);
