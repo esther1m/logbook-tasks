@@ -19,8 +19,12 @@ class TaskManager {
     }
 
     listTasks(){
-        
-        return this.taskList
+        this.taskList.forEach((task) => {
+            console.log(
+                `ID: ${task.id}, Description: ${task.taskDescription}, Completed: ${task.completed}`
+                )
+        })
+    
     }
 }
 
@@ -31,4 +35,4 @@ taskManager.addTask("Buy groceries");
 taskManager.addTask("Read a book");
 taskManager.addTask("Write code");
 
-console.log(taskManager.listTasks()); // Should display all tasks
+taskManager.listTasks(); // Should display all tasks
