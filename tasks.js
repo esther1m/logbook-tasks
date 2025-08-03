@@ -39,7 +39,7 @@ class TaskManager {
     }
 
     filterTasks(condition){
-        this.taskList.filter((task => condition(task)))
+        return this.taskList.filter((task => condition(task)))
     }
 }
 
