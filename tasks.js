@@ -28,7 +28,7 @@ class TaskManager {
 
     completeTask(id){
         this.taskList.forEach((task) => {
-            if (id == task.id) {
+            if (id === task.id) {
                 task.completed = true;
             }
         })
