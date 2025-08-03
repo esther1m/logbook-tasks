@@ -24,7 +24,7 @@ class TaskManager {
     listTasks(){
         this.taskList.forEach((task) => {
             console.log(
-                `ID: ${task.id}, Description: ${task.taskDescription}, Completed: ${task.completed}`
+                `ID: ${task.id}, Description: ${task.taskDescription}, Completed: ${task.completed}, Priority: ${task.priority}, Due by: ${task.dueDate} \n`
                 )
         })
     }
