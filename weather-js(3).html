@@ -1,0 +1,34 @@
+<!--this web page allows users to enter the name of a town and retrieve current weather information using the OpenWeatherMap API.-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+  <head> 
+    <title>Weather API Fetch Test</title> 
+  </head> 
+  <body> 
+    <div> 
+      <!--the below is allowing the user to input text and when the user clicks the search button, it invokes the function searchWeather and 
+      outputs the result from the function-->
+      <input type="text" id="weather-town" /> <button onclick="searchWeather()">Search</button> 
+      <br /> 
+      <br /> The current weather is: <span id="results"></span> 
+    </div> 
+    <!--the below function grabs the user input, fetches the api and searches with the user's input. The response then gets added to the responsedata 
+    array as the first element, and then returns the weather. it returns an error message if it encounters an error-->
+    <script type="text/javascript">
+    const APIKey = 'ab2c9d8ba56c7e1446bf3bfbcdcea5b1'
+    async function searchWeather() {
+      try {
+        const town = document.getElementById('weather-town').value;
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${town}&appid=${APIKey}`);
+        const responseData = await response.json();
+        const weather = responseData.weather[0]
+        document.getElementById('results').textContent = `${weather.main} (${weather.description})`;
+      } catch (error) {
+        console.error('Error fetching weather:', error);
+      }
+    }
+  </script>  
+  </body>
+</html>
