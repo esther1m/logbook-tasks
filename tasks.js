@@ -24,7 +24,14 @@ class TaskManager {
                 `ID: ${task.id}, Description: ${task.taskDescription}, Completed: ${task.completed}`
                 )
         })
-    
+    }
+
+    completeTask(id){
+        this.taskList.forEach((task) => {
+            if (id == task.id) {
+                task.completed = true;
+            }
+        })
     }
 }
 
@@ -35,4 +42,6 @@ taskManager.addTask("Buy groceries");
 taskManager.addTask("Read a book");
 taskManager.addTask("Write code");
 
+// Mark a task as completed
+taskManager.completeTask(1);
 taskManager.listTasks(); // Should display all tasks
