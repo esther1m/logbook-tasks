@@ -33,6 +33,10 @@ class TaskManager {
             }
         })
     }
+
+    deleteTask(id){
+        this.taskList = this.taskList.filter((task => task.id !== id))
+    }
 }
 
 // Create a new task manager
@@ -45,3 +49,7 @@ taskManager.addTask("Write code");
 // Mark a task as completed
 taskManager.completeTask(1);
 taskManager.listTasks(); // Should display all tasks
+
+taskManager.deleteTask(2);
+taskManager.listTasks();
+
