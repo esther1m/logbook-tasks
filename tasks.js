@@ -37,6 +37,10 @@ class TaskManager {
     deleteTask(id){
         this.taskList = this.taskList.filter((task => task.id !== id))
     }
+
+    filterTasks(condition){
+        this.taskList.filter((task => condition(task)))
+    }
 }
 
 // Create a new task manager
@@ -53,3 +57,5 @@ taskManager.listTasks(); // Should display all tasks
 taskManager.deleteTask(2);
 taskManager.listTasks();
 
+const completedTasks = taskManager.filterTasks(task => task.completed);
+console.log(completedTasks);
