@@ -44,6 +44,11 @@ class TaskManager {
     filterTasks(condition){
         return this.taskList.filter((task => condition(task)))
     }
+
+    priorityTasks() {
+        this.taskList.sort((a,b) => a.priority - b.priority)
+        
+    }
 }
 
 // Create a new task manager
@@ -62,3 +67,6 @@ taskManager.listTasks();
 
 const completedTasks = taskManager.filterTasks(task => task.completed);
 console.log(...completedTasks);
+
+taskManager.priorityTasks();
+taskManager.listTasks();
