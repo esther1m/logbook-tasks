@@ -58,4 +58,4 @@ taskManager.deleteTask(2);
 taskManager.listTasks();
 
 const completedTasks = taskManager.filterTasks(task => task.completed);
-console.log(completedTasks);
+console.log(...completedTasks);
