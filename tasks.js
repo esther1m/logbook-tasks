@@ -18,3 +18,10 @@ class TaskManager {
         this.taskList.push(newTask)
     }
 }
+
+// Create a new task manager
+const taskManager = new TaskManager();
+// Add tasks
+taskManager.addTask("Buy groceries");
+taskManager.addTask("Read a book");
+taskManager.addTask("Write code");
